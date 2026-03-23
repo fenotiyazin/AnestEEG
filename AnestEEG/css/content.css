@@ -1,0 +1,263 @@
+/* ─── CONTENT BLOCKS ──────────────────────────────────────────── */
+.content-block {
+    margin-bottom: 44px;
+}
+
+.content-heading {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.content-text {
+    font-size: 0.97rem;
+    color: #c0cfe0;
+    line-height: 1.85;
+    margin-bottom: 16px;
+}
+
+.content-text:last-child { margin-bottom: 0; }
+
+.highlight {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+/* ─── COMPARISON GRID ─────────────────────────────────────────── */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.comparison-card {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.comparison-card.highlight-card {
+    border-color: rgba(0,198,167,0.3);
+    background: rgba(0,198,167,0.05);
+}
+
+.comparison-icon {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.comparison-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text);
+    margin-bottom: 12px;
+}
+
+.comparison-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.comparison-list li {
+    font-size: 0.83rem;
+    color: var(--muted);
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.comparison-list li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--border);
+}
+
+.tag-red   { color: #f87171; font-size: 0.78rem; font-weight: 600; }
+.tag-green { color: var(--accent); font-size: 0.78rem; font-weight: 600; }
+
+/* ─── INFO LIST ───────────────────────────────────────────────── */
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 20px 0;
+}
+
+.info-item {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+}
+
+.info-num {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    min-width: 24px;
+    margin-top: 2px;
+    opacity: 0.8;
+}
+
+.info-body {
+    font-size: 0.88rem;
+    color: #b0c4d8;
+    line-height: 1.7;
+}
+
+.info-body strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* ─── SYNC DIAGRAM ────────────────────────────────────────────── */
+.sync-diagram {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.sync-state {
+    flex: 1;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.sync-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.sync-waves {
+    margin-bottom: 10px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.sync-desc {
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.sync-arrow-right {
+    font-size: 1.5rem;
+    color: var(--muted);
+    opacity: 0.4;
+    flex-shrink: 0;
+}
+
+/* ─── CALLOUT BOX ─────────────────────────────────────────────── */
+.callout-box {
+    display: flex;
+    gap: 16px;
+    background: rgba(0,198,167,0.06);
+    border: 1px solid rgba(0,198,167,0.2);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 20px;
+}
+
+.callout-icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.callout-text {
+    font-size: 0.88rem;
+    color: #b0c4d8;
+    line-height: 1.75;
+}
+
+.callout-text strong {
+    color: var(--accent);
+}
+
+/* ─── SIMULATOR PLACEHOLDER ───────────────────────────────────── */
+.simulator-placeholder {
+    border: 1px dashed rgba(0,198,167,0.25);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.sim-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(0,198,167,0.06);
+    border-bottom: 1px dashed rgba(0,198,167,0.2);
+    padding: 14px 20px;
+}
+
+.sim-badge {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    background: rgba(0,198,167,0.15);
+    color: var(--accent);
+    border-radius: 99px;
+    border: 1px solid rgba(0,198,167,0.3);
+}
+
+.sim-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.sim-body {
+    padding: 36px;
+    text-align: center;
+    color: var(--muted);
+}
+
+.sim-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    opacity: 0.4;
+}
+
+.sim-body p {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    max-width: 480px;
+    margin: 0 auto 8px;
+}
+
+.sim-coming {
+    font-size: 0.75rem !important;
+    opacity: 0.5;
+    font-style: italic;
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────── */
+@media (max-width: 640px) {
+    .comparison-grid { grid-template-columns: 1fr; }
+    .sync-diagram    { flex-direction: column; }
+    .sync-arrow-right { transform: rotate(90deg); }
+}
