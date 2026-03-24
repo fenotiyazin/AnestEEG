@@ -95,7 +95,8 @@ function loadModule(id) {
     if (id === 1 && typeof onModule1PageLoad === 'function') onModule1PageLoad(1);
     if (id === 3 && typeof onModule3PageLoad === 'function') onModule3PageLoad(1);
     if (id === 4 && typeof onModule4PageLoad === 'function') onModule4PageLoad(1);
-    if (id === 5) onModule5PageLoad(1);
+    if (id === 5 && typeof onModule5PageLoad === 'function') onModule5PageLoad(1);
+    if (id === 6 && typeof onModule6PageLoad === 'function') onModule6PageLoad(1);
 }
 
 // ─── BUILD MODULE SHELL ───────────────────────────────────────────────────────
@@ -188,12 +189,12 @@ function switchPage(pageNum, totalPages) {
     if (activeModule === 4 && typeof onModule4PageLoad === 'function') onModule4PageLoad(pageNum);
     if (activeModule === 1 && typeof onModule1PageLoad === 'function') onModule1PageLoad(pageNum);
     if (activeModule === 5 && typeof onModule5PageLoad === 'function') onModule5PageLoad(pageNum);
-    
+    if (activeModule === 6 && typeof onModule6PageLoad === 'function') onModule6PageLoad(pageNum);
 }
 
 // ─── GET PAGE CONTENT ─────────────────────────────────────────────────────────
 function getPageContent(moduleId, pageNum) {
-    const contentMap = { 1: module1Content, 2: module2Content, 3: module3Content, 4: module4Content, 5: module5Content };
+    const contentMap = { 1: module1Content, 2: module2Content, 3: module3Content, 4: module4Content, 5: module5Content, 6: module6Content };
     const modContent = contentMap[moduleId];
     if (modContent && modContent[pageNum]) {
         return modContent[pageNum];
