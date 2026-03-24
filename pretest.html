@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnestEEG — Pre-Test</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pretest.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="header-inner">
+            <h1 class="logo">AnestEEG</h1>
+            <p class="slogan">Pre-Test Assessment</p>
+        </div>
+        <div class="progress-wrap">
+            <div class="progress-label"><span id="q-current">1</span> / 10</div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="progress-fill"></div>
+            </div>
+        </div>
+    </header>
+
+    <main id="app">
+        <section id="pretest-section">
+
+            <div id="question-card" class="question-card">
+                <!-- JS tarafından doldurulacak -->
+            </div>
+
+            <div class="nav-buttons">
+                <button class="btn-nav" id="prev-btn" onclick="prevQuestion()" disabled>← Previous</button>
+                <button class="btn-nav btn-next" id="next-btn" onclick="nextQuestion()">Next →</button>
+            </div>
+
+        </section>
+    </main>
+
+    <footer id="footer">
+        <p>AnestEEG — Pre-Test &nbsp;|&nbsp; Your answers are saved automatically</p>
+    </footer>
+
+    <script src="js/pretest.js"></script>
+</body>
+</html>

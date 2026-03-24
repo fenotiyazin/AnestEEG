@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnestEEG — Modules</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modules.css">
+    <link rel="stylesheet" href="css/content.css">
+    <script src="js/module1.js"></script>
+    <link rel="stylesheet" href="css/content2.css">
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <header id="topbar">
+        <div class="topbar-left">
+            <button class="sidebar-toggle" id="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+            <span class="logo-small">AnestEEG</span>
+        </div>
+        <div class="topbar-center" id="topbar-title">
+            Select a module to begin
+        </div>
+        <div class="topbar-right">
+            <span id="user-greeting"></span>
+        </div>
+    </header>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside id="sidebar">
+
+            <div class="sidebar-section-label">Course Progress</div>
+            <div class="sidebar-progress">
+                <div class="sidebar-progress-bar">
+                    <div class="sidebar-progress-fill" id="sidebar-progress-fill"></div>
+                </div>
+                <span class="sidebar-progress-text" id="sidebar-progress-text">0 / 10 completed</span>
+            </div>
+
+            <div class="sidebar-section-label" style="margin-top: 24px;">Modules</div>
+
+            <nav class="module-nav" id="module-nav">
+                <!-- JS ile doldurulacak -->
+            </nav>
+
+            <div class="sidebar-footer">
+                <button class="btn-posttest" id="posttest-btn" onclick="goToPosttest()" disabled>
+                    Take Post-Test →
+                </button>
+            </div>
+
+        </aside>
+
+        <!-- MAIN CONTENT AREA -->
+        <main id="content-area">
+
+            <!-- WELCOME SCREEN (default) -->
+            <div id="welcome-screen" class="welcome-screen">
+                <div class="welcome-inner">
+                    <div class="welcome-icon">🧠</div>
+                    <h2>Welcome to AnestEEG</h2>
+                    <p>You have completed the pre-test. Now work through the 10 modules at your own pace. Select a module from the sidebar to begin.</p>
+                    <div class="welcome-flow">
+                        <div class="wf-step done">✓ Pre-Test</div>
+                        <div class="wf-arrow">→</div>
+                        <div class="wf-step active">10 Modules</div>
+                        <div class="wf-arrow">→</div>
+                        <div class="wf-step">Post-Test</div>
+                    </div>
+                    <button class="btn-start-first" onclick="loadModule(1)">Start with Module 1 →</button>
+                </div>
+            </div>
+
+            <!-- MODULE CONTENT (JS tarafından doldurulacak) -->
+            <div id="module-content" style="display:none;">
+                <!-- Modül içeriği buraya yüklenecek -->
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="js/eeg_engine.js"></script>
+    <script src="js/modules.js"></script>
+    <script src="js/sim_wave.js"></script>
+    <script src="js/sim_filter.js"></script>
+    <script src="js/sim_anaesthesia_phases_v4.js"></script>
+    <script src="js/module1_v2.js"></script>
+    <script src="js/module2.js"></script>
+    <script src="js/module3.js"></script>
+    <script src="js/module4_v2.js"></script>
+</body>
+</html>
